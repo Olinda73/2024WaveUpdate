@@ -11,6 +11,10 @@ body{
 	-webkit-font-smoothing: antialiased;
 }
 
+/* .container {
+	display: flex;
+  } */
+
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
@@ -268,6 +272,14 @@ hr{
 	font-size: 16px;
 }
 
+.box {
+	border: 1px solid #ddd;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 50%;
+	min-width: 200px; 
+  }
 /* default heading */
 
 .default-heading,
@@ -341,7 +353,12 @@ hr{
   -o-animation: rotating 8s linear infinite;
   animation: rotating 8s linear infinite;
 }
-
+.font-color { /*used for song titles*/
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	color: #204be5;
+}
 /* hero */
 
 .hero .hero-content {
@@ -414,7 +431,11 @@ hr{
 	font-size: 15px;
 	line-height: 30px;
 }
-
+.img {
+	flex: 1; /* This will make all the images take equal width */
+	object-fit: cover; /* This will make sure the images maintain their proportions */
+	margin: 5px; /* This will add some spacing between the images */
+  }
 .playlist-content .playlist-number {
 	margin-bottom: 10px;
 	padding: 10px 15px;
