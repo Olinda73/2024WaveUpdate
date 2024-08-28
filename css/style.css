@@ -61,8 +61,19 @@ hr{
 .btn-lg, .btn-group-lg > .btn {
 	padding: 12px 32px;
 	font-size: 18px;
+	margin-right: 20px;
 }
-
+.flex-parent {
+	display: flex;
+  }
+  
+  .jc-center {
+	justify-content: center;
+  }
+  
+  button.margin-right {
+	margin-right: 20px;
+  }
 
 .pad {padding: 130px 0px;}
 
