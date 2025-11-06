@@ -141,8 +141,9 @@
 								<li><a href="#latestalbum">Recent Releases</a></li>
 								<li><a href="#featuredalbum">Featured Tracks</a></li>
 								<li><a href="#joinus">Project Requests</a></li>
-								<li><a href="#portfolio">Photo Gallery</a></li>
-								<li><a href="#events">Merch</a></li>
+								<li><a href="#portfolio">Portfolio</a></li>
+								<li><a href="#gallery">Photo Gallery</a></li>
+								<li><a href="//ko-fi.com/wavevendors/shop">Merch</a></li>
 								<li><a href="#team">About Wave Vendors</a></li>
 								<li><a href="#contact">Contact</a></li>
 							</ul>
@@ -154,31 +155,31 @@
 			
 			<!-- banner area -->
 			<div class="banner">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<div id="carouse-banner" class="carousel slide" data-ride="carousel" data-interval="10000" >
 					<!-- Wrapper for slides -->
 					 
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<img src="img/banner/b1.jpg" alt="...">
+							<img src="img/banner/Downhill_Shift_Single_Cover_Art.PNG" style="height:fit-content; width:fit-content;" alt="...">
 							<div class="container">
 								<!-- banner caption -->
 								<div class="carousel-caption slide-one">
 									<!-- heading -->
-									<h2 class="animated fadeInLeftBig"> Wave Vendors New Release</h2>
+									<h2 class="animated fadeInLeftBig"> <i>Downhill Shift</i> coming soon to wherever you stream your music. </h2>
 									<!-- paragraph -->
-									<h3 class="animated fadeInRightBig">First full length album coming 2025</h3>
+									<h3 class="animated fadeInRightBig">New Single Release Nov. 14th</h3>
 									<!-- button -->
-									<a href="https://open.spotify.com/artist/1v3ffsiMrg2Z0dpFawaAjn?si=6TaBuXlNTOmhKudvNrEK2w" class="animated fadeIn btn btn-theme">Save on Spotify - Coming Soon!</a>
+									<a href="https://open.spotify.com/artist/1v3ffsiMrg2Z0dpFawaAjn?si=6TaBuXlNTOmhKudvNrEK2w" class="animated fadeIn btn btn-theme">Save on Spotify</a>
 								</div>
 							</div>
 						</div>
 						<div class="item">
-							<img src="img/banner/b2.jpg" alt="...">
+							<img src="img/banner/b2111.jpg" alt="...">
 							<div class="container">
 								<!-- banner caption -->
 								<div class="carousel-caption slide-two">
 									<!-- heading -->
-									<h2 class="animated fadeInLeftBig"><i class="fa-solid fa-music"></i>Listen to latest release...</h2>
+									<h2 class="animated fadeInLeftBig"><i class="fa-solid fa-music"></i>Listen to the latest release...</h2>
 									<!-- paragraph -->
 									<h3 class="animated fadeInRightBig">Enjoy the dreamy, chill sounds of beef naps</h3>
 									<!-- button -->
@@ -450,7 +451,7 @@
 							<div class="row">
 							<!-- button line -->
 							 <div class="col-md-3" style="margin-right: 100px; margin-left: 100px;">
-							<a class="btn btn-lg btn-theme margin-right" href="mailto:wavevendors@gmail.com">Request a Commission</a>
+							<a class="btn btn-lg btn-theme margin-right" href="https://ko-fi.com/wavevendors/commissions??commissionAlias=1f43e1e34a&amp;openCommissionsMenu=True">Request a Commission</a>
 						</div>
 						<div class="col-md-3" style="margin-right: -25px; margin-right: 25px;">
 							<a class="btn btn-lg btn-theme" href="https://www.fiverr.com/jthrower_music">See Portfolio Examples</a>
@@ -477,12 +478,15 @@
 						<!-- paragraph -->
 						<p><strong>Contact Us</strong> and let us know if you have any questions, Don't forget to subscribe for more awesome stuff by typing your email below.</p>
 						<!-- subscribe form -->
-						<form>
+						<form action="" id="subscription-form" method="POST">
 							     
 							<div class="input-group">
-								<input type="text" class="form-control input-lg" placeholder="Email">
+								<input type="email" class="form-control in put-lg" placeholder="Email">
 								<span class="input-group-btn">
 									<button class="btn btn-default btn-lg" type="button">Subscribe</button>
+
+									<div class="message" id="message"></div>
+								
 								</span>
 							</div> </input-group>
 						</form>
@@ -647,5 +651,7 @@
 		<script src="js/html5shiv.js"></script>
 		<!-- Custom JS -->
 		<script src="js/custom.js"></script>
+		<!--Email Subscription Form JS-->
+		<script src="js/script.js"></script>
 	</body>	
 </html>
