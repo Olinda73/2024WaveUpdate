@@ -35,6 +35,83 @@
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/style-color.css" rel="stylesheet">
 		
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				background: #0d0d0d;
+				color: #f5f5f5;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+			a {
+				transition: opacity 0.2s ease, transform 0.2s ease;
+			}
+			a:hover,
+			a:focus {
+				opacity: 0.85;
+			}
+			iframe {
+				border: 0;
+			}
+			.wrapper {
+				overflow-x: hidden;
+			}
+			.secondary-menu {
+				background: rgba(0,0,0,0.75);
+			}
+			.navbar-default {
+				background: rgba(0,0,0,0.9);
+				border: none;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+			}
+			.navbar-default .navbar-nav > li > a {
+				font-weight: 600;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+			.song-title {
+				font-weight: 700;
+				margin-bottom: 10px;
+				letter-spacing: 0.03em;
+			}
+			.social a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+				margin: 0 6px;
+			}
+			.copy-right {
+				margin-top: 16px;
+				font-size: 12px;
+				letter-spacing: 0.04em;
+				color: #d6d6d6;
+			}
+			@media (max-width: 767px) {
+				.navbar-default .navbar-nav {
+					text-align: center;
+				}
+				.carousel-caption {
+					padding-bottom: 30px;
+				}
+				.carousel-caption h2,
+				.carousel-caption h3 {
+					font-size: 20px;
+				}
+				.btn {
+					white-space: normal;
+				}
+			}
+		</style>
+		
 		<!-- Font Awesome Kit -->
 		<script src="https://kit.fontawesome.com/b98bdc9b0e.js" crossorigin="anonymous"></script>
 		<!-- Google Fonts -->
@@ -152,7 +229,7 @@
 			<div class="nav-animate"></div>
 			
 			<!-- featured album -->
-			<section class="featured pad" id="featuredalbum">
+			<section class="featured pad" id="latestalbum">
 				<div class="container">
 					<!-- default heading -->
 					<div class="default-heading">
