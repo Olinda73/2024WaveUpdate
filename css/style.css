@@ -905,3 +905,154 @@ html body .row > [class*="col-"] {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT AND READABILITY FIXES
+   ========================================================= */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: 17px;
+  line-height: 1.7;
+}
+p { font-size: 17px; line-height: 1.7; }
+.navbar-default .navbar-nav > li > a { font-size: 15px; }
+.btn, .btn-theme, .btn-default, .btn-lg { font-size: 15px; line-height: 1.4; }
+.cta-element p, .why-item p, .news-content p,
+.portfolio-item-content p, .what-we-item p, .form-content > p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Featured Tracks: neutralize legacy Webflow floats and let Grid control layout */
+.featured .album-columns {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 30px !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 30px !important;
+}
+.featured .album-columns > .w-col,
+.featured .album-columns > .w-col-4 {
+  float: none !important;
+  width: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  min-width: 0;
+}
+.featured .album-list, .featured .w-dyn-items, .featured .song-list-item {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.featured .song-title { font-size: 21px; line-height: 1.3; text-align: center; }
+.featured .song-list-item iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 300px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  border: 0;
+}
+
+/* About: apply Grid to the row that actually contains the three cards */
+.about { padding: 80px 0; }
+.about .about-what-we { display: block !important; width: 100%; }
+.about .about-what-we > .row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 30px !important;
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.about .about-what-we > .row > .col-md-4,
+.about .about-what-we > .row > .col-sm-4 {
+  float: none !important;
+  width: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.about .what-we-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+  text-align: center;
+}
+.about .what-we-item h3 { font-size: 23px; line-height: 1.3; margin-bottom: 16px; }
+.about .what-we-item p { font-size: 17px; line-height: 1.75; }
+
+/* Project buttons: override inline legacy spacing */
+.apply-btn .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 !important;
+}
+.apply-btn .row > .col-md-3 {
+  float: none !important;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+.news-content iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991px) {
+  .featured .album-columns { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .about .about-what-we > .row { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 767px) {
+  body, p { font-size: 17px; line-height: 1.7; }
+  .container, html body .container {
+    width: calc(100% - 30px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pad { padding: 60px 0; }
+  .default-heading, .default-heading-shadow { margin-bottom: 36px; }
+  .default-heading h2, .default-heading-shadow h2 { font-size: 27px; line-height: 1.25; }
+  .navbar-default .navbar-nav > li > a { font-size: 16px; line-height: 1.4; padding: 13px 16px; }
+  .carousel-caption h2 { font-size: 27px; line-height: 1.2; }
+  .carousel-caption h3 { font-size: 18px; line-height: 1.45; }
+  .featured .album-columns { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .featured .song-title { font-size: 21px; padding: 16px; }
+  .featured .song-list-item iframe { height: 300px !important; }
+  .about { padding: 60px 0; }
+  .about .about-what-we > .row { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .about .what-we-item { padding: 26px 22px; }
+  .about .what-we-item h3 { font-size: 22px; }
+  .cta-element h3, .news-content h3, .portfolio-item-content h3 { font-size: 22px; }
+  .btn, .btn-theme, .btn-default, .btn-lg {
+    font-size: 16px;
+    line-height: 1.4;
+    white-space: normal;
+    padding: 13px 22px;
+  }
+  .apply-btn .row { display: block; width: 100%; }
+  .apply-btn .row > .col-md-3 { display: block; width: 100% !important; margin: 0 0 14px !important; }
+  .apply-btn .btn { display: block; width: 100%; max-width: 360px; margin: 0 auto; }
+  .form-control, input.form-control, textarea.form-control { font-size: 16px; }
+}
+@media (max-width: 480px) {
+  .default-heading h2, .default-heading-shadow h2 { font-size: 25px; }
+  .carousel-caption { width: 92%; padding: 16px; }
+  .carousel-caption h2 { font-size: 23px; }
+  .carousel-caption h3 { font-size: 17px; }
+  .featured .song-list-item iframe { height: 280px !important; }
+}
